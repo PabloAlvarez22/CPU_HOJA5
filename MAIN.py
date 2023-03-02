@@ -45,8 +45,8 @@ class MainProgram:
                     if Simulation.Instructions == 0:
                         print(f'Tiempo de procesamiento =  {self.Time()} //// Instruccion realizada = {Simulation.Key} PROCESO TERMINADO')
                     else:
-                        New = randint(1, 2)
-                        if New == 1:
+                        NewProcess = randint(1, 2)
+                        if NewProcess == 1:
                             print(f'Tiempo de procesamiento =  {self.Time()} //// Instruccion realizada = {Simulation.Key} ESPERANDO/COLA')
                             WaitingList = randint(1, 5)
                             yield self.Environment.timeout(WaitingList)
