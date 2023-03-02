@@ -2,9 +2,9 @@ import simpy
 import random
 from MAIN import MediaTime
 from MAIN import MainProgram
-CpuCores = 1
+CpuCores = 2
 RandomNumber_seed = 100
-PeriodTime = 10
+PeriodTime = 1
 CycleInstructions = 3
 RamMB = 100
 ProcessCC = 25
