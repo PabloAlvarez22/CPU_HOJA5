@@ -45,11 +45,11 @@ class MainProgram:
                     if Simulation.Instructions == 0:
                         print(f'Tiempo de procesamiento =  {self.Time()} //// Instruccion realizada = {Simulation.Key} PROCESO TERMINADO')
                     else:
-                        next_state = randint(1, 2)
-                        if next_state == 1:
+                        New = randint(1, 2)
+                        if New == 1:
                             print(f'Tiempo de procesamiento =  {self.Time()} //// Instruccion realizada = {Simulation.Key} ESPERANDO/COLA')
-                            waiting_time = randint(1, 5)
-                            yield self.Environment.timeout(waiting_time)
+                            WaitingList = randint(1, 5)
+                            yield self.Environment.timeout(WaitingList)
                         else:
                             print(f'Tiempo de procesamiento =  {self.Time()} //// Instruccion realizada = {Simulation.Key} PROCESO LISTO')
                     yield self.CPU.release(CPURequest)

@@ -14,3 +14,15 @@ CPU = simpy.Resource(Environment, capacity=CpuCores)
 processingTime = []
 random.seed(RandomNumber_seed)
 
+def ProgramSimulation():        
+    print("Inicio de la Simulación del CPU")
+    i = 0
+    while i  < ProcessCC:
+        i  += 1
+        NewTime = random.expovariate(1.0 / PeriodTime)
+        yield Environment.timeout(NewTime)
+        MainProgram(i ,Environment, CycleInstructions, RAM, CPU)
+Environment.process(ProgramSimulation())
+Environment.run()
+MediaTime()
+print("Programa Finalizado")
